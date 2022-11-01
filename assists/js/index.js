@@ -30,7 +30,7 @@ generate_qr = () => {
         api_user_input = user_api_input.value
     })
     generate_qr_btn.addEventListener("click", () => {
-        api_url = `http://api.qrserver.com/v1/create-qr-code/?data=${api_user_input}&size=100x100`
+        api_url = `https://api.qrserver.com/v1/create-qr-code/?data=${api_user_input}&size=100x100`
         generate_getdata();
     })
 }
@@ -78,7 +78,7 @@ read_qr = () => {
         read_prev_img.src = `${create_url}`
         let formdata = new FormData();
             formdata.append("file",fake_url)
-        api_url = `http://api.qrserver.com/v1/read-qr-code/`
+        api_url = `https://api.qrserver.com/v1/read-qr-code/`
         read_getdata(formdata)
     })
 }
